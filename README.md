@@ -25,5 +25,6 @@ VITE_FIREBASE_STORAGE_BUCKET=book-tracker.appspot.com
 VITE_FIREBASE_MESSAGING_SENDER_ID=TuoID
 VITE_FIREBASE_APP_ID=TuoAppID
 VITE_GOOGLE_BOOKS_API_KEY=LaTuaChiaveGoogleBooks
+```
 
 * in fine sarà possibile installare le dipendenze e avviare il progetto in locale.
