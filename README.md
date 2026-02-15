@@ -17,12 +17,13 @@ per avviare il progetto in locale è necessario:
 * creare una chiave api mediante google cloud console per le API Google Books;
 * le credenziali di accesso per i servizi firebase e per le api Google Books saranno da inserire in un file .env configurato come segue:
 
-    VITE_FIREBASE_API_KEY=LaTuaChiave
-    VITE_FIREBASE_AUTH_DOMAIN=book-tracker.firebaseapp.com
-    VITE_FIREBASE_PROJECT_ID=book-tracker
-    VITE_FIREBASE_STORAGE_BUCKET=book-tracker.appspot.com
-    VITE_FIREBASE_MESSAGING_SENDER_ID=TuoID
-    VITE_FIREBASE_APP_ID=TuoAppID
-    VITE_GOOGLE_BOOKS_API_KEY=LaTuaChiaveGoogleBooks
+```text
+VITE_FIREBASE_API_KEY=LaTuaChiave
+VITE_FIREBASE_AUTH_DOMAIN=book-tracker.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=book-tracker
+VITE_FIREBASE_STORAGE_BUCKET=book-tracker.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=TuoID
+VITE_FIREBASE_APP_ID=TuoAppID
+VITE_GOOGLE_BOOKS_API_KEY=LaTuaChiaveGoogleBooks
 
 * in fine sarà possibile installare le dipendenze e avviare il progetto in locale.
