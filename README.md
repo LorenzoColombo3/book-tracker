@@ -27,4 +27,3 @@ per avviare il progetto in locale è necessario:
         VITE_GOOGLE_BOOKS_API_KEY=LaTuaChiaveGoogleBooks
 
     in fine sarà possibile installare le dipendenze e avviare il progetto in locale.
-    
