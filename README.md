@@ -1,5 +1,5 @@
 # 📚 Book Tracker App
-Una Web Application moderna sviluppata con **React** e **Vite** che permette agli utenti di cercare libri tramite la *Google Books API* e gestire la propria libreria personale utilizzando **Firebase** come backend.
+Una Web Application moderna sviluppata con React e Vite che permette agli utenti di cercare libri tramite la Google Books API e gestire la propria libreria personale utilizzando Firebase come backend.
 
 ## Funzionalità principali
 * **Ricerca Avanzata:** attraverso l'integrazione con servizi esterni, l'utente può cercare libri filtrando per titolo, autore o codice ISBN;
