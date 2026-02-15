@@ -9,6 +9,8 @@ import LibraryPage from './LibraryPage';
 import BookDetailPage from './BookDetailPage';
 import '../styles/App.css';
 
+//Componente principale che definisce la struttura del layout con la Navbar e gestisce il routing dell'applicazione tramite HashRouter
+
 function AppContent() {
   const { user, setUser, logout, loading } = AuthViewModel();
   const navigate = useNavigate();

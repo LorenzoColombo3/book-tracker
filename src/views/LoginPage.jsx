@@ -3,6 +3,8 @@ import { Container, Form, FormGroup, Label, Input, Button, Alert, Card, CardBody
 import { AuthViewModel } from '../viewModel/AuthViewModel';
 import { useNavigate, Link } from 'react-router-dom';
 
+//pagina per l'accesso utente mediante email e password
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

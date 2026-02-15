@@ -4,10 +4,16 @@ import { collection, onSnapshot } from "firebase/firestore";
 import { libraryService } from '../services/libraryService';
 import { LibraryModel } from '../model/LibraryModel';
 
+/**
+ * Gestisce le interazioni tra l'utente e la sua libreria, permettendo di aggiungere/rimuovere 
+ * libri e fornendo feedback visivi sulle operazioni effettuate
+ */
+
 export function LibraryViewModel(user, setUser) {
     const [loading, setLoading] = useState(false);
     const [feedback, setFeedback] = useState({ visible: false, message: '', color: '' });
 
+    //Sincronizza in tempo reale la libreria dell'utente con il firestore datastore
     useEffect(() => {
         if (!user?.uid || !setUser) return;
 
@@ -29,6 +35,7 @@ export function LibraryViewModel(user, setUser) {
         setTimeout(() => setFeedback({ visible: false, message: '', color: '' }), 3000);
     }, []);
 
+    //Metodo per il caricamento della collezione di libri dal database
     const loadLibrary = (async () => {
         if (!user?.uid || !setUser) return;
         setLoading(true);
@@ -45,6 +52,7 @@ export function LibraryViewModel(user, setUser) {
         }
     }, [user?.uid, setUser]);
 
+    //Gestisce l'aggiunta di un nuovo libro alla collezione dell'utente fornendo un feedback sull'esito dell'operazione
     const addToLibrary = async (book) => {
         if (!user) return;
         try {
@@ -59,6 +67,7 @@ export function LibraryViewModel(user, setUser) {
         }
     };
 
+    //Rimuove un libro specifico dalla libreria mostrando un feedback visivo
     const removeFromLibrary = async (bookId) => {
         if (!user) return;
         try {
@@ -76,6 +85,7 @@ export function LibraryViewModel(user, setUser) {
         removeFromLibrary, 
         loadLibrary,
         feedback,
+        //Verifica se un determinato libro fa già parte della collezione dell'utente
         isBookSaved: (id) => user?.library?.hasBook(id) || false
     };
 }

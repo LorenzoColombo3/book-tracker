@@ -7,6 +7,8 @@ import BookListView from './BookListView';
 import ViewModeToggle from './ViewModeToggle';
 import '../styles/App.css';
 
+//Visualizza la collezione personale dei libri dell'utente autenticato, permettendone la gestione
+
 const LibraryPage = ({ user, setUser }) => {
     const { libraryBooks, loading, removeFromLibrary, feedback, isBookSaved, addToLibrary, loadLibrary } = LibraryViewModel(user, setUser);
     const [viewMode, setViewMode] = useState('grid');

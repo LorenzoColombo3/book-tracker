@@ -10,6 +10,9 @@ import BookListView from './BookListView';
 import ViewModeToggle from './ViewModeToggle';
 import '../styles/App.css';
 
+//Landing page che integra la barra di ricerca con filtri e gestisce la visualizzazione dei risultati con
+//supporto allo scroll sino ad esaurimento risultati
+
 const Home = ({ user, setUser }) => {
   const { books, searching, search, loadMore, hasMore, error, lastQuery } = BookViewModel();
   const { addToLibrary, removeFromLibrary, feedback, isBookSaved } = LibraryViewModel(user, setUser);

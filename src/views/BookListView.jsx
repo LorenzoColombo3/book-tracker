@@ -3,7 +3,9 @@ import { Col, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import placeholderImg from '../img/placeholder_copertiva.png';
 
-const BookListView = ({ books, user, isBookSaved, addToLibrary, removeFromLibrary, saveScroll, lastBookElementRef }) => {
+//Componente per la visualizzazione dei libri in un layout in stile lista
+
+const BookListView = ({ books, user, isBookSaved, addToLibrary, removeFromLibrary, lastBookElementRef }) => {
   return (
     <div className="flex-column">
       {books.map((book, index) => {
@@ -13,7 +15,7 @@ const BookListView = ({ books, user, isBookSaved, addToLibrary, removeFromLibrar
         return (
           <Col xs={12} key={`${book.id}-${index}`} className="mb-3" ref={isLast ? lastBookElementRef : null}>
             <div className="book-list-item shadow-sm">
-              <Link to={`/book/${book.id}`} onClick={saveScroll}>
+              <Link to={`/book/${book.id}`}>
                 <img 
                   src={book.thumbnail} 
                   className="list-thumbnail me-4" 

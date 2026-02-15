@@ -6,6 +6,8 @@ import { LibraryViewModel } from '../viewModel/LibraryViewModel';
 import { AuthViewModel } from '../viewModel/AuthViewModel';
 import '../styles/App.css';
 
+//Mostra le informazioni dettagliate di un singolo libro e permette di aggiungerlo o rimuoverlo dalla libreria in caso di utente autenticato
+
 const BookDetailPage = () => {
     const { id } = useParams();
     const { user, setUser } = AuthViewModel();

@@ -3,7 +3,9 @@ import { Row, Col, Card, CardBody, CardTitle, CardImg, Button } from 'reactstrap
 import { Link } from 'react-router-dom';
 import placeholderImg from '../img/placeholder_copertiva.png';
 
-const BookGridView = ({ books, user, isBookSaved, addToLibrary, removeFromLibrary, saveScroll, lastBookElementRef }) => {
+//Componente per la visualizzazione dei libri in un layout a griglia responsiva
+
+const BookGridView = ({ books, user, isBookSaved, addToLibrary, removeFromLibrary, lastBookElementRef }) => {
   return (
     <Row>
       {books.map((book, index) => {
@@ -13,7 +15,7 @@ const BookGridView = ({ books, user, isBookSaved, addToLibrary, removeFromLibrar
         return (
           <Col lg={3} md={4} sm={6} key={`${book.id}-${index}`} className="mb-4" ref={isLast ? lastBookElementRef : null}>
             <Card className="h-100 book-card shadow-sm border-0">
-              <Link to={`/book/${book.id}`} onClick={saveScroll}>
+              <Link to={`/book/${book.id}`}>
                 <CardImg 
                   top 
                   src={book.thumbnail} 

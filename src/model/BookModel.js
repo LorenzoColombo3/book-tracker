@@ -1,8 +1,6 @@
 import placeholderImg from '../img/placeholder_copertiva.png';
 
-/**
- * Questa classe rappresenta il libro con tutti i suoi attributi 
- */
+//Questa classe rappresenta il libro con tutti i suoi attributi 
 
 export class BookModel {
     constructor(id, title, authors, thumbnail, description, isbn) {
@@ -14,6 +12,7 @@ export class BookModel {
         this.isbn = isbn;
     }
 
+    //Metodo di parsing tra google api e BookModel
     static fromGoogleApi(item) {
         return new BookModel(
             item.id,

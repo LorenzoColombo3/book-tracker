@@ -3,6 +3,8 @@ import { BookModel } from '../model/BookModel';
 const API_KEY = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
 
 export const bookService = {
+
+    // gestisce la comunicazione con GoogleBooks per cercare libri filtrando tra titolo, autore e isbn
     searchBooks: async (query, searchType, startIndex = 0) => {
         const maxResults = 20;
         let refinedQuery = "";
@@ -31,6 +33,7 @@ export const bookService = {
         }
     },
 
+    //recupera i dettagli di un libro a partire dal suo id
     getBookById: async (id) => {
         const response = await fetch(`https://www.googleapis.com/books/v1/volumes/${id}?key=${API_KEY}`);
         if (!response.ok) throw new Error('Dettagli non trovati');
