@@ -24,7 +24,7 @@ const BookListView = ({ books, user, isBookSaved, addToLibrary, removeFromLibrar
                 />
               </Link>
               <div className="flex-grow-1">
-                <Link to={`/book/${book.id}`} onClick={saveScroll} className="text-decoration-none text-dark">
+                <Link to={`/book/${book.id}`} className="text-decoration-none text-dark">
                   <h5 className="mb-1 fw-bold text-truncate" style={{maxWidth: '400px'}}>{book.title}</h5>
                 </Link>
                 <p className="text-muted mb-0">{book.authors}</p>
