@@ -1,16 +1,30 @@
-# React + Vite
+# 📚 Book Tracker App
+Una Web Application moderna sviluppata con **React** e **Vite** che permette agli utenti di cercare libri tramite la *Google Books API* e gestire la propria libreria personale (Libri letti, in lettura, da leggere) utilizzando **Firebase** come backend.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Funzionalità principali
+* **Ricerca Avanzata:** attraverso l'integrazione con servizi esterni, l'utente può cercare libri filtrando per titolo, autore o codice ISBN;
+* **Visualizzazione dettagli libro:**  ogni libro trovato dispone di una scheda dedicata che mostra la copertina, gli autori, l'ISBN e una descrizione estesa del contenuto;
+* **Gestione della propria libreria:** gli utenti registrati possono aggiungere libri alla propria collezione mediante un apposito pulsante e rimuoverli in qualsiasi momento; 
+* **Sistema di autenticazione:** l'accesso alle funzioni di salvataggio è protetto da un sistema di registrazione ed accesso che garantisce la persistenza dei dati personali per ciascun utente.
 
-Currently, two official plugins are available:
+## Demo Online
+Il progetto è deployato e consultabile al seguente link: https://lorenzocolombo3.github.io/book-tracker/#/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Avvio in locale del progetto
+per avviare il progetto in locale è necessario: 
+    clonare la repository github in locale;
+    creare un progetto firebase attivando firebase authentication e firestone datastore;
+    creare una chiave api mediante google cloud console per le API Google Books;
+    le credenziali di accesso per i servizi firebase e per le api Google Books saranno da inserire in un file .env configurato come segue:
 
-## React Compiler
+        VITE_FIREBASE_API_KEY=LaTuaChiave
+        VITE_FIREBASE_AUTH_DOMAIN=book-tracker.firebaseapp.com
+        VITE_FIREBASE_PROJECT_ID=book-tracker
+        VITE_FIREBASE_STORAGE_BUCKET=book-tracker.appspot.com
+        VITE_FIREBASE_MESSAGING_SENDER_ID=TuoID
+        VITE_FIREBASE_APP_ID=TuoAppID
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+        VITE_GOOGLE_BOOKS_API_KEY=LaTuaChiaveGoogleBooks
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    in fine sarà possibile installare le dipendenze e avviare il progetto in locale.
+    
